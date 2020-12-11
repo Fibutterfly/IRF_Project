@@ -1,2 +1,2 @@
-# IRF_Project
-BCE IRF évvégi beadandó
+Factory Patternt választottam, a Timerek témájainak kezelése miatt. Első sorban csak a hang lesz benne változó, de a Factory segítségével későbbiekben könnyedén fejleszthető lesz.
+A Factory Pattern lényege, hogy elmaszkolja a csúnya példányosításokat és megkötéseket add a fejlesztőknek, hogy milyen funkciókra lesz szükség ahhoz, hogy egy új osztály működni tudjon.
