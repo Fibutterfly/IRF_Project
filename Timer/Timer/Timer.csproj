@@ -76,8 +76,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IWorkingTimer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestTimer.cs" />
     <Compile Include="Timer.cs">
       <DependentUpon>TimerDb.tt</DependentUpon>
     </Compile>
