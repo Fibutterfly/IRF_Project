@@ -10,26 +10,22 @@ namespace Timer
 {
     abstract class TestTimer : IWorkingTimer
     {
-        public string Név { get; }
+        public string Név { get; set; }
 
-        public string idő { get; }
+        public string idő { get; set; }
 
-        private int MP { get; }
+        public int MP { get; set; }
         private int spend_time { get; set; }
-        private System.Timers.Timer timer { get; }
+        private System.Timers.Timer timer { get; set; }
         abstract protected string soundname { get;}
-        private SoundPlayer Player;
-
-        public TestTimer(string _Name, int _Sec)
+        abstract protected SoundPlayer Player { get;}
+        public void init()
         {
-            this.Név = _Name;
-            this.MP = _Sec;
             int minute = CalIdő();
-            this.idő = $"{minute}:{MP-minute*60}";
+            this.idő = $"{minute}:{MP - minute * 60}";
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
             timer.Elapsed += Timer_Elapsed;
-            Player = new SoundPlayer(soundname);
         }
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -46,7 +42,12 @@ namespace Timer
         {
             int perc = 60;
             int szorzo = 0;
-            while (MP - perc* szorzo > 0)
+            while (MP - (perc* (szorzo+1)) > 0)
+            {
+                szorzo++;
+            }
+            int maradek = MP - (perc * (szorzo));
+            if (maradek >= perc)
             {
                 szorzo++;
             }
