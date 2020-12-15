@@ -32,7 +32,7 @@ namespace Timer
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_keres = new System.Windows.Forms.TextBox();
             this.dgw_nonActive = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.but_active = new System.Windows.Forms.Button();
@@ -73,7 +73,7 @@ namespace Timer
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tb_keres, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.dgw_nonActive, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -96,12 +96,12 @@ namespace Timer
             this.label1.Text = "Keresés";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // textBox1
+            // tb_keres
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tb_keres.Location = new System.Drawing.Point(3, 28);
+            this.tb_keres.Name = "tb_keres";
+            this.tb_keres.Size = new System.Drawing.Size(100, 20);
+            this.tb_keres.TabIndex = 1;
             // 
             // dgw_nonActive
             // 
@@ -187,9 +187,9 @@ namespace Timer
             // but_act_start
             // 
             this.but_act_start.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.but_act_start.Location = new System.Drawing.Point(13, 3);
+            this.but_act_start.Location = new System.Drawing.Point(14, 3);
             this.but_act_start.Name = "but_act_start";
-            this.but_act_start.Size = new System.Drawing.Size(126, 41);
+            this.but_act_start.Size = new System.Drawing.Size(125, 41);
             this.but_act_start.TabIndex = 0;
             this.but_act_start.Text = "Start";
             this.but_act_start.UseVisualStyleBackColor = true;
@@ -197,9 +197,9 @@ namespace Timer
             // but_act_stop
             // 
             this.but_act_stop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.but_act_stop.Location = new System.Drawing.Point(165, 3);
+            this.but_act_stop.Location = new System.Drawing.Point(167, 3);
             this.but_act_stop.Name = "but_act_stop";
-            this.but_act_stop.Size = new System.Drawing.Size(126, 41);
+            this.but_act_stop.Size = new System.Drawing.Size(125, 41);
             this.but_act_stop.TabIndex = 2;
             this.but_act_stop.Text = "Stop";
             this.but_act_stop.UseVisualStyleBackColor = true;
@@ -238,7 +238,7 @@ namespace Timer
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_keres;
         private System.Windows.Forms.DataGridView dgw_nonActive;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button but_active;
