@@ -123,7 +123,7 @@ namespace Timer
                 }
                 else if (item.Theme == 2)
                 {
-                    MoodleTestTimer temp = new MoodleTestTimer
+                    MoodleTaskTimer temp = new MoodleTaskTimer
                     {
                         MP = item.SEC,
                         Név = item.Name_Id
