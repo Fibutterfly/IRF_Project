@@ -52,6 +52,10 @@ namespace Timer
 
         private void But_act_stop_Click(object sender, EventArgs e)
         {
+            if (dgw_active.SelectedRows.Count > 0)
+            {
+                ActiveTimers[dgw_active.CurrentCellAddress.Y].stop();
+            }
             dgw_active.Refresh();
         }
 

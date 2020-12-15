@@ -21,19 +21,21 @@ namespace Timer
         abstract protected SoundPlayer Player { get; set; }
         public void init()
         {
-            int minute = CalIdő();
-            this.idő = $"{minute}:{MP - minute * 60}";
+            WriteTime();
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
             timer.Elapsed += Timer_Elapsed;
         }
-
+        private void WriteTime()
+        {
+            int minute = CalIdő();
+            this.idő = $"{minute}:{(MP - spend_time) - minute * 60}";
+        }
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             //System.Windows.Forms.MessageBox.Show("DEEEE");
             spend_time++;
-            int minute = CalIdő();
-            this.idő = $"{minute}:{(MP - spend_time) - minute * 60}";
+            WriteTime();
             //this.idő = spend_time.ToString();
             if (spend_time == MP)
             {
@@ -72,6 +74,7 @@ namespace Timer
         {
             timer.Stop();
             spend_time = 0;
+            WriteTime();
         }
 
         abstract public object Clone();
