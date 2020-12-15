@@ -41,14 +41,14 @@ namespace Timer
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.but_act_start = new System.Windows.Forms.Button();
             this.but_act_stop = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgw_active = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_nonActive)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_active)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -154,7 +154,7 @@ namespace Timer
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.dataGridView2, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dgw_active, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(483, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -204,14 +204,14 @@ namespace Timer
             this.but_act_stop.Text = "Stop";
             this.but_act_stop.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgw_active
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 56);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(308, 385);
-            this.dataGridView2.TabIndex = 1;
+            this.dgw_active.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgw_active.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgw_active.Location = new System.Drawing.Point(3, 56);
+            this.dgw_active.Name = "dgw_active";
+            this.dgw_active.Size = new System.Drawing.Size(308, 385);
+            this.dgw_active.TabIndex = 1;
             // 
             // Form1
             // 
@@ -228,7 +228,7 @@ namespace Timer
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgw_active)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,7 +247,7 @@ namespace Timer
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button but_act_start;
         private System.Windows.Forms.Button but_act_stop;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgw_active;
     }
 }
 

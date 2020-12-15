@@ -4,6 +4,7 @@ using System.Linq;
 using System.Media;
 using System.Text;
 using System.Threading.Tasks;
+using Timer;
 
 namespace Timer
 {
@@ -15,7 +16,7 @@ namespace Timer
 
         public MoodleTestTimer()
         {
-            soundname = @"sounds/LYNC_ringing.wav";
+            soundname = AppDomain.CurrentDomain.BaseDirectory + "//sounds//LYNC_ringing.wav";
             Player = new SoundPlayer(soundname);
         }
     }

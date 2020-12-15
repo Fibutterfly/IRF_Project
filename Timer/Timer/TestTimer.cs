@@ -30,23 +30,30 @@ namespace Timer
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
+            //System.Windows.Forms.MessageBox.Show("DEEEE");
             spend_time++;
-            CalIdő();
-            if(spend_time == MP)
+            int minute = CalIdő();
+            this.idő = $"{minute}:{(MP - spend_time) - minute * 60}";
+            //this.idő = spend_time.ToString();
+            if (spend_time == MP)
             {
+                //System.Windows.Forms.MessageBox.Show("Test");
+                Player.Play();
                 stop();
             }
+
         }
 
         private int CalIdő()
         {
+            int akttime = MP - spend_time;
             int perc = 60;
             int szorzo = 0;
-            while (MP - (perc* (szorzo+1)) > 0)
+            while (akttime - (perc* (szorzo+1)) > 0)
             {
                 szorzo++;
             }
-            int maradek = MP - (perc * (szorzo));
+            int maradek = akttime - (perc * (szorzo));
             if (maradek >= perc)
             {
                 szorzo++;
@@ -56,6 +63,7 @@ namespace Timer
         }
         public void start()
         {
+            
             spend_time = 0;
             timer.Start();
         }
