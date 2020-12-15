@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Timer
 {
@@ -39,6 +40,28 @@ namespace Timer
             but_act_start.Click += But_act_start_Click;
             but_act_stop.Click += But_act_stop_Click;
             but_act_pause.Click += But_act_pause_Click;
+            but_saveCSV.Click += But_saveCSV_Click;
+        }
+
+        private void But_saveCSV_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.DefaultExt = "csv";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string path = sfd.FileName;
+                    var ling = from x in context.Timers
+                               select x;
+                    using (StreamWriter sw = new StreamWriter(path))
+                    {
+                        foreach (var item in ling)
+                        {
+                            sw.WriteLine($"{item.Name_Id};{item.SEC};{item.Theme}");
+                        }
+                    }
+                }
+            }
         }
 
         private void But_act_pause_Click(object sender, EventArgs e)

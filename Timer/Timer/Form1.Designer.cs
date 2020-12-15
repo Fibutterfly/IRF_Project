@@ -37,16 +37,19 @@ namespace Timer
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.but_active = new System.Windows.Forms.Button();
             this.but_deactive = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.but_saveCSV = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.but_act_start = new System.Windows.Forms.Button();
             this.but_act_stop = new System.Windows.Forms.Button();
-            this.dgw_active = new System.Windows.Forms.DataGridView();
             this.but_act_pause = new System.Windows.Forms.Button();
+            this.dgw_active = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_nonActive)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_active)).BeginInit();
@@ -119,6 +122,7 @@ namespace Timer
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.but_active, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.but_deactive, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(323, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -135,7 +139,7 @@ namespace Timer
             this.but_active.Dock = System.Windows.Forms.DockStyle.Fill;
             this.but_active.Location = new System.Drawing.Point(3, 136);
             this.but_active.Name = "but_active";
-            this.but_active.Size = new System.Drawing.Size(148, 82);
+            this.but_active.Size = new System.Drawing.Size(200, 82);
             this.but_active.TabIndex = 0;
             this.but_active.Text = "Aktiválás";
             this.but_active.UseVisualStyleBackColor = true;
@@ -145,10 +149,36 @@ namespace Timer
             this.but_deactive.Dock = System.Windows.Forms.DockStyle.Fill;
             this.but_deactive.Location = new System.Drawing.Point(3, 224);
             this.but_deactive.Name = "but_deactive";
-            this.but_deactive.Size = new System.Drawing.Size(148, 82);
+            this.but_deactive.Size = new System.Drawing.Size(200, 82);
             this.but_deactive.TabIndex = 1;
             this.but_deactive.Text = "Deaktiválás";
             this.but_deactive.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.but_saveCSV, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 312);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 3;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 129);
+            this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // but_saveCSV
+            // 
+            this.but_saveCSV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.but_saveCSV.Location = new System.Drawing.Point(3, 80);
+            this.but_saveCSV.Name = "but_saveCSV";
+            this.but_saveCSV.Size = new System.Drawing.Size(194, 32);
+            this.but_saveCSV.TabIndex = 0;
+            this.but_saveCSV.Text = "CSV-be mentés";
+            this.but_saveCSV.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel4
             // 
@@ -206,15 +236,6 @@ namespace Timer
             this.but_act_stop.Text = "Stop";
             this.but_act_stop.UseVisualStyleBackColor = true;
             // 
-            // dgw_active
-            // 
-            this.dgw_active.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgw_active.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgw_active.Location = new System.Drawing.Point(3, 56);
-            this.dgw_active.Name = "dgw_active";
-            this.dgw_active.Size = new System.Drawing.Size(308, 385);
-            this.dgw_active.TabIndex = 1;
-            // 
             // but_act_pause
             // 
             this.but_act_pause.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -224,6 +245,15 @@ namespace Timer
             this.but_act_pause.TabIndex = 3;
             this.but_act_pause.Text = "Szünet";
             this.but_act_pause.UseVisualStyleBackColor = true;
+            // 
+            // dgw_active
+            // 
+            this.dgw_active.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgw_active.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgw_active.Location = new System.Drawing.Point(3, 56);
+            this.dgw_active.Name = "dgw_active";
+            this.dgw_active.Size = new System.Drawing.Size(308, 385);
+            this.dgw_active.TabIndex = 1;
             // 
             // Form1
             // 
@@ -238,6 +268,7 @@ namespace Timer
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_nonActive)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_active)).EndInit();
@@ -261,6 +292,8 @@ namespace Timer
         private System.Windows.Forms.Button but_act_stop;
         private System.Windows.Forms.DataGridView dgw_active;
         private System.Windows.Forms.Button but_act_pause;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button but_saveCSV;
     }
 }
 
