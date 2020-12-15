@@ -78,5 +78,16 @@ namespace Timer
         }
 
         abstract public object Clone();
+        public void Pause()
+        {
+            if (timer.Enabled)
+            {
+                timer.Stop();
+            }
+            else
+            {
+                timer.Start();
+            }
+        }
     }
 }

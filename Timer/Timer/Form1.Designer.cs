@@ -42,6 +42,7 @@ namespace Timer
             this.but_act_start = new System.Windows.Forms.Button();
             this.but_act_stop = new System.Windows.Forms.Button();
             this.dgw_active = new System.Windows.Forms.DataGridView();
+            this.but_act_pause = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw_nonActive)).BeginInit();
@@ -167,15 +168,16 @@ namespace Timer
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 7;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.85714F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.85714F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.424658F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.76712F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.424658F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.76712F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.424658F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.76712F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.424658F));
             this.tableLayoutPanel5.Controls.Add(this.but_act_start, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.but_act_stop, 5, 0);
+            this.tableLayoutPanel5.Controls.Add(this.but_act_pause, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -187,9 +189,9 @@ namespace Timer
             // but_act_start
             // 
             this.but_act_start.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.but_act_start.Location = new System.Drawing.Point(14, 3);
+            this.but_act_start.Location = new System.Drawing.Point(13, 3);
             this.but_act_start.Name = "but_act_start";
-            this.but_act_start.Size = new System.Drawing.Size(125, 41);
+            this.but_act_start.Size = new System.Drawing.Size(82, 41);
             this.but_act_start.TabIndex = 0;
             this.but_act_start.Text = "Start";
             this.but_act_start.UseVisualStyleBackColor = true;
@@ -197,9 +199,9 @@ namespace Timer
             // but_act_stop
             // 
             this.but_act_stop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.but_act_stop.Location = new System.Drawing.Point(167, 3);
+            this.but_act_stop.Location = new System.Drawing.Point(209, 3);
             this.but_act_stop.Name = "but_act_stop";
-            this.but_act_stop.Size = new System.Drawing.Size(125, 41);
+            this.but_act_stop.Size = new System.Drawing.Size(82, 41);
             this.but_act_stop.TabIndex = 2;
             this.but_act_stop.Text = "Stop";
             this.but_act_stop.UseVisualStyleBackColor = true;
@@ -212,6 +214,16 @@ namespace Timer
             this.dgw_active.Name = "dgw_active";
             this.dgw_active.Size = new System.Drawing.Size(308, 385);
             this.dgw_active.TabIndex = 1;
+            // 
+            // but_act_pause
+            // 
+            this.but_act_pause.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.but_act_pause.Location = new System.Drawing.Point(111, 3);
+            this.but_act_pause.Name = "but_act_pause";
+            this.but_act_pause.Size = new System.Drawing.Size(82, 41);
+            this.but_act_pause.TabIndex = 3;
+            this.but_act_pause.Text = "Szünet";
+            this.but_act_pause.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -248,6 +260,7 @@ namespace Timer
         private System.Windows.Forms.Button but_act_start;
         private System.Windows.Forms.Button but_act_stop;
         private System.Windows.Forms.DataGridView dgw_active;
+        private System.Windows.Forms.Button but_act_pause;
     }
 }
 

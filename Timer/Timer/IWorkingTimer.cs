@@ -14,5 +14,6 @@ namespace Timer
         void init();
         void start();
         void stop();
+        void Pause();
     }
 }

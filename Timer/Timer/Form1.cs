@@ -38,6 +38,16 @@ namespace Timer
             but_deactive.Click += But_deactive_Click;
             but_act_start.Click += But_act_start_Click;
             but_act_stop.Click += But_act_stop_Click;
+            but_act_pause.Click += But_act_pause_Click;
+        }
+
+        private void But_act_pause_Click(object sender, EventArgs e)
+        {
+            if (dgw_active.SelectedRows.Count > 0)
+            {
+                ActiveTimers[dgw_active.CurrentCellAddress.Y].Pause();
+            }
+            dgw_active.Refresh();
         }
 
         private void Active_refresh_Tick(object sender, EventArgs e)
