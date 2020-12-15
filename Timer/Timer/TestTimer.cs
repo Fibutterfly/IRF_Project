@@ -18,7 +18,7 @@ namespace Timer
         private int spend_time { get; set; }
         private System.Timers.Timer timer { get; set; }
         abstract protected string soundname { get;}
-        abstract protected SoundPlayer Player { get;}
+        abstract protected SoundPlayer Player { get; set; }
         public void init()
         {
             int minute = CalIdő();
@@ -73,5 +73,7 @@ namespace Timer
             timer.Stop();
             spend_time = 0;
         }
+
+        abstract public object Clone();
     }
 }

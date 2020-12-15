@@ -7,7 +7,7 @@ using System.Media;
 
 namespace Timer
 {
-    interface IWorkingTimer
+    interface IWorkingTimer: ICloneable
     {
         string Név { get; }
         string idő {  get; }

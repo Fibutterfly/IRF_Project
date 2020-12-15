@@ -77,7 +77,8 @@ namespace Timer
         {
             if (dgw_nonActive.SelectedRows.Count > 0)
             {
-                ActiveTimers.Add(nonActiveTimers[dgw_nonActive.CurrentCellAddress.Y]);
+                //var asd = nonActiveTimers[dgw_nonActive.CurrentCellAddress.Y];
+                ActiveTimers.Add((IWorkingTimer)nonActiveTimers[dgw_nonActive.CurrentCellAddress.Y].Clone());
                 
             }
         }
