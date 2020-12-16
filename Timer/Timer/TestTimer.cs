@@ -33,13 +33,10 @@ namespace Timer
         }
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            //System.Windows.Forms.MessageBox.Show("DEEEE");
             spend_time++;
             WriteTime();
-            //this.idő = spend_time.ToString();
             if (spend_time == MP)
             {
-                //System.Windows.Forms.MessageBox.Show("Test");
                 Player.Play();
                 stop();
             }

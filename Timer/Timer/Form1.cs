@@ -114,7 +114,6 @@ namespace Timer
         {
             if (dgw_nonActive.SelectedRows.Count > 0)
             {
-                //var asd = nonActiveTimers[dgw_nonActive.CurrentCellAddress.Y];
                 ActiveTimers.Add((IWorkingTimer)nonActiveTimers[dgw_nonActive.CurrentCellAddress.Y].Clone());
                 
             }

@@ -10,7 +10,7 @@ namespace Timer
     interface IWorkingTimer: ICloneable
     {
         string Név { get; }
-        string idő {  get; }
+        string idő { get; }
         void init();
         void start();
         void stop();
