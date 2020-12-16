@@ -30,7 +30,7 @@ namespace Timer
             dgw_active.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             System.Windows.Forms.Timer active_refresh = new System.Windows.Forms.Timer();
             active_refresh.Interval = 250;
-            active_refresh.Tick += Active_refresh_Tick; ;
+            active_refresh.Tick += Active_refresh_Tick;
             active_refresh.Start();
             getTimers();
 

@@ -17,3 +17,7 @@ namespace Timer
         void Pause();
     }
 }
+
+
+
+
